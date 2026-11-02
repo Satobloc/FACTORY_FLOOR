@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Satobloc/FACTORY_FLOOR/blob/main/schemas/floor_item.schema.json",
+  "title": "Factory Floor cross-repository item envelope",
+  "description": "Workflow and authority envelope around a canonical research artifact. Does not replace HsH equation.schema.json or any source artifact.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "item_id",
+    "title",
+    "object_type",
+    "origin_type",
+    "source_refs",
+    "theory_status",
+    "workflow_status",
+    "math_status",
+    "physical_status",
+    "presentation_status",
+    "visibility",
+    "dependencies",
+    "artifact_refs",
+    "decision_records",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "item_id": {
+      "type": "string",
+      "pattern": "^(EQ|CL|CN|DS|CD|AR|TOOL|FIG|PAPER)-[A-Z0-9][A-Z0-9._-]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_type": {
+      "enum": [
+        "equation",
+        "theorem",
+        "claim",
+        "construction",
+        "dataset",
+        "code",
+        "tool",
+        "figure",
+        "paper",
+        "conversation",
+        "source_bundle",
+        "workflow_task",
+        "other"
+      ]
+    },
+    "origin_type": {
+      "enum": [
+        "nathan_direct",
+        "historical_author",
+        "assistant_generated",
+        "external_source",
+        "mixed",
+        "unresolved"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "repository",
+          "path",
+          "source_role"
+        ],
+        "properties": {
+          "repository": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "commit_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "blob_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "source_role": {
+            "enum": [
+              "primary",
+              "copy",
+              "derived",
+              "external",
+              "context",
+              "unknown"
+            ]
+          },
+          "speaker_or_author": {
+            "type": "string"
+          },
+          "source_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "theory_status": {
+      "enum": [
+        "historical",
+        "imported",
+        "active_research",
+        "sandbox",
+        "playground",
+        "quarantined",
+        "superseded",
+        "official_construction",
+        "unresolved"
+      ]
+    },
+    "workflow_status": {
+      "enum": [
+        "located",
+        "source_recovery_blocked",
+        "source_recovered",
+        "typed",
+        "in_research",
+        "awaiting_review",
+        "formalized",
+        "ci_passed",
+        "workshop_cleared",
+        "eligible_for_candidacy_consideration",
+        "awaiting_nathan",
+        "incorporated",
+        "rejected",
+        "parked",
+        "blocked"
+      ]
+    },
+    "math_status": {
+      "enum": [
+        "not_assessed",
+        "partial",
+        "symbolic_checked",
+        "numerically_checked",
+        "lean_checked",
+        "workshop_cleared",
+        "failed",
+        "unresolved",
+        "not_applicable"
+      ]
+    },
+    "physical_status": {
+      "enum": [
+        "not_assessed",
+        "no_prediction",
+        "data_needed",
+        "blocked_pending_permission",
+        "comparison_ready",
+        "tested",
+        "supported",
+        "contradicted",
+        "inconclusive",
+        "not_applicable"
+      ]
+    },
+    "presentation_status": {
+      "enum": [
+        "source_only",
+        "presentation_pending",
+        "presented",
+        "cached",
+        "offline",
+        "not_applicable"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "private",
+        "internal",
+        "public_candidate",
+        "public"
+      ]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "superseded_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "repository",
+          "path"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "lean_source",
+              "ci_run",
+              "calculation_script",
+              "data",
+              "figure",
+              "manuscript",
+              "review",
+              "other"
+            ]
+          },
+          "repository": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decision_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_type",
+          "decision",
+          "authority",
+          "date"
+        ],
+        "properties": {
+          "decision_type": {
+            "enum": [
+              "source_attribution",
+              "research_status",
+              "mathematical_clearance",
+              "candidacy",
+              "construction_incorporation",
+              "physical_assessment",
+              "publication",
+              "visibility"
+            ]
+          },
+          "decision": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          },
+          "reviewer": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
