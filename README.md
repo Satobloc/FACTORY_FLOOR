@@ -2,18 +2,28 @@
 || NEEDS + FIXES || 1 GLASS+HSH >> 2 WORKSHOP >> 3 LIVE >> 4 ARTIFACTS >> 5 WEBSITE >> [[NATHAN]] 
 
 
+## Mandatory geometry-first admission gate | 3 November 2026
+
+**Nathan Direct:** Nothing enters Factory Floor unless the system under study has a precise geometric plot, that exact plot has passed independent hostile fidelity review, and the plot is displayed with the submitted file. Geometry is the theoretical object; mathematics describes and constrains it but cannot replace it.
+
+Five distinct representational levels: **Primary** observation → **Secondary** physical working model/orrery → **Tertiary** precision dynamic geometric software model → **Quaternary** precision static geometric diagram → **Pentary** mathematics. The quaternary plot is mandatory for Factory Floor; tertiary dynamics are also required when the claim concerns evolution, response, transformation or deformation. Empirical claims must remain anchored to primary observation. These levels are not interchangeable.
+
+The six legacy issues below are retained as historical mathematical/proof intake records. Their issue bodies have been individually amended: all are **LEGACY INTAKE ONLY / GEOMETRY_NOT_SUPPLIED / NOT FACTORY FLOOR ELIGIBLE** until object-specific plots and independent hostile review are supplied. Their bounded Lean/CI results are not retracted. No previous mathematical check is silently promoted or demoted by this new geometry gate.
+
+Full operational specification: [HsH Factory Floor Geometry-First Admission Gate](https://github.com/Satobloc/HsH/blob/main/WORKSPACES/COMMON/FACTORY_FLOOR_GEOMETRY_FIRST_GATE_2026-11-03.md).
+
 ## Formal-verification intake desk | 26 October 2026
 
 **This is an intake register, not a completed scientific showroom.** The issue descriptions below document bounded Lean mathematical checks and original-source evidence. They do not by themselves establish H(s)H physical models, new physics, measured predictions, theorem-scope completeness, or LIVE/WEBSITE publication. Preserve the original Factory Floor chain: **1 GLASS+HSH → 2 WORKSHOP → 3 LIVE → 4 ARTIFACTS → 5 WEBSITE**.
 
-| Entry | Source / checked mathematical content | Lean CI readback | Current Factory state |
+| Entry | Source / checked mathematical content | Lean CI readback | Mathematical/proof record | Geometry admission |
 |---|---|---|---|
-| [EQ-0001 / issue #2](https://github.com/Satobloc/FACTORY_FLOOR/issues/2) | Three equal sphere carrier radius identities and selected algebraic endpoint/inequality statements; **embedded regular-circle topology not fully proved in Lean** | [run 39987817298](https://github.com/Satobloc/HsH/actions/runs/39987817298): `verify` success | INTAKE / eligible for candidacy consideration only |
-| [EQ-0002 / issue #3](https://github.com/Satobloc/FACTORY_FLOOR/issues/3) | Isovolumetric deformation exponential/trace identities; **constitutive dynamics not derived** | [run 39996929325](https://github.com/Satobloc/HsH/actions/runs/39996929325): `verify` success | INTAKE / mathematically checked |
-| [EQ-0003 / issue #1](https://github.com/Satobloc/FACTORY_FLOOR/issues/1) | Historical filament dispersion equation **algebraic rearrangement only**, not field-action proof | [run 39960043562](https://github.com/Satobloc/HsH/actions/runs/39960043562): `verify` success | INTAKE / theory unvalidated |
-| [EQ-0004 / issue #4](https://github.com/Satobloc/FACTORY_FLOOR/issues/4) | Finite-dimensional/action field Hamiltonian Legendre identities; **not a selected H(s)H action** | [run 40005392966](https://github.com/Satobloc/HsH/actions/runs/40005392966): `verify` success | INTAKE / theory unvalidated |
-| [EQ-0005 / issue #5](https://github.com/Satobloc/FACTORY_FLOOR/issues/5) | Classical linear-wave/action and ring-mode algebra; **no H(s)H finite-core constitutive coefficients or held-out observable derived** | [run 40040647137](https://github.com/Satobloc/HsH/actions/runs/40040647137): `verify` success | INTAKE / theory unvalidated |
-| [EQ-0006 / issue #14](https://github.com/Satobloc/FACTORY_FLOOR/issues/14) | SAT.O13 scalar-times-unitary norm gate; **loop-dressed mass matrix and A4-to-three-flavor projection not formalized** | [run 41330715937](https://github.com/Satobloc/HsH/actions/runs/41330715937): success, 8,945 jobs | INTAKE / algebraic check only; not an H(s)H candidate |
+| [EQ-0001 / issue #2](https://github.com/Satobloc/FACTORY_FLOOR/issues/2) | Three equal sphere carrier radius identities and selected algebraic endpoint/inequality statements; **embedded regular-circle topology not fully proved in Lean** | [run 39987817298](https://github.com/Satobloc/HsH/actions/runs/39987817298): `verify` success | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
+| [EQ-0002 / issue #3](https://github.com/Satobloc/FACTORY_FLOOR/issues/3) | Isovolumetric deformation exponential/trace identities; **constitutive dynamics not derived** | [run 39996929325](https://github.com/Satobloc/HsH/actions/runs/39996929325): `verify` success | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
+| [EQ-0003 / issue #1](https://github.com/Satobloc/FACTORY_FLOOR/issues/1) | Historical filament dispersion equation **algebraic rearrangement only**, not field-action proof | [run 39960043562](https://github.com/Satobloc/HsH/actions/runs/39960043562): `verify` success | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
+| [EQ-0004 / issue #4](https://github.com/Satobloc/FACTORY_FLOOR/issues/4) | Finite-dimensional/action field Hamiltonian Legendre identities; **not a selected H(s)H action** | [run 40005392966](https://github.com/Satobloc/HsH/actions/runs/40005392966): `verify` success | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
+| [EQ-0005 / issue #5](https://github.com/Satobloc/FACTORY_FLOOR/issues/5) | Classical linear-wave/action and ring-mode algebra; **no H(s)H finite-core constitutive coefficients or held-out observable derived** | [run 40040647137](https://github.com/Satobloc/HsH/actions/runs/40040647137): `verify` success | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
+| [EQ-0006 / issue #14](https://github.com/Satobloc/FACTORY_FLOOR/issues/14) | SAT.O13 scalar-times-unitary norm gate; **loop-dressed mass matrix and A4-to-three-flavor projection not formalized** | [run 41330715937](https://github.com/Satobloc/HsH/actions/runs/41330715937): success, 8,945 jobs | Historical mathematical intake retained | `GEOMETRY_NOT_SUPPLIED`
 
 At the 26 October inspection, the shared [HsH formal-verification pull request #262](https://github.com/Satobloc/HsH/pull/262) reported `open`, `merged=false`, `mergeable=false`. The individual verified issue reports identify original SAT archive source paths and committed proof variants. GitHub Actions job `verify` status was independently fetched for all five runs then cited. That constitutes **CI outcome readback**, not line-by-line proof-body adjudication; do that in the WORKSHOP.
 
